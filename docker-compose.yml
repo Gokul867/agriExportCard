@@ -4,4 +4,4 @@ services:
     container_name: rkimportandexport-site
     ports:
       - "8080:80"
-    restart: unless-stoppedDockerfile
+    restart: unless-stopped
