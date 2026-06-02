@@ -11,7 +11,7 @@ services:
       - "traefik.http.routers.rk-site.rule=Host(`rkimportandexport.com`) || Host(`www.rkimportandexport.com`)"
       - "traefik.http.routers.rk-site.entrypoints=web,websecure"
       - "traefik.http.routers.rk-site.tls=true"
-      - "traefik.http.routers.rk-site.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.rk-site.tls.certresolver=mytlschallenge"
       - "traefik.http.services.rk-site.loadbalancer.server.port=80"
 
 networks:
