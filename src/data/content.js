@@ -98,7 +98,7 @@ export const regions = [
 
 export const contactCards = [
   { icon: Phone, label: 'Phone', value: '+91 90252 91577' },
-  { icon: Mail, label: 'Email', value: 'rubanrk810@gmail.com.com' },
+  { icon: Mail, label: 'Email', value: 'rubanrk810@gmail.com' },
   { icon: MapPin, label: 'Address', value: 'No.23/64, Ramakrishna Nagar, Chennai, Tamil Nadu, India' },
 ]
 
