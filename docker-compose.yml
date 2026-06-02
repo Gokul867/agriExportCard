@@ -2,11 +2,17 @@ services:
   website:
     build: .
     container_name: rkimportandexport-site
-    ports:
-      - "8080:80"
     restart: unless-stopped
     networks:
       - n8n_default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=n8n_default"
+      - "traefik.http.routers.rk-site.rule=Host(`rkimportandexport.com`) || Host(`www.rkimportandexport.com`)"
+      - "traefik.http.routers.rk-site.entrypoints=web,websecure"
+      - "traefik.http.routers.rk-site.tls=true"
+      - "traefik.http.routers.rk-site.tls.certresolver=letsencrypt"
+      - "traefik.http.services.rk-site.loadbalancer.server.port=80"
 
 networks:
   n8n_default:
